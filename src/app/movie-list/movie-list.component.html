@@ -1,0 +1,9 @@
+<h1>Movie list:</h1>
+<div class="col-md-6 mt-4 ml-4">
+  <ul class="list-group">
+    <li *ngFor="let movie of movies" class="list-group-item list-group-item-action list-group-item-light border-0"
+      (click)="selectMovie(movie)" [class.active]="movie == selectedMovie">
+      <span>{{movie.Title}} {{movie.Year}}</span>
+    </li>
+  </ul>
+</div>
